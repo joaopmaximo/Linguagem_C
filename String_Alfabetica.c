@@ -19,7 +19,7 @@ int main (void) {
     }
 
     for (i = 0; i < n; i++) {
-        printf ("vetor %d = %s\n", i + 1, vetor [i]);
+        printf ("String %d = %s\n", i + 1, vetor [i]);
     }
 
     if (esta_ordenado (n, vetor)) {
