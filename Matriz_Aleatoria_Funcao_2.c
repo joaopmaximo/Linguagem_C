@@ -43,3 +43,5 @@ void MatrizAleatoria (int linhas, int colunas, int M [linhas] [colunas]) {
             }
         }
 }
+
+Eeeitaaa
