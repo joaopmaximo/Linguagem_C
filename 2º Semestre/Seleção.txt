@@ -1,0 +1,38 @@
+Divisão e conquista:
+Estratégia usada para entradas
+grandes
+Quebrar a entrada em pedaços
+menores (Divisão)
+Resolver cada pedaço
+separadamente (Conquista)
+Combinar os resultados
+
+Técnica consiste em 3 passos básicos
+1.Divisão: dividir o problema original em
+subproblemas menores do mesmo tipo. Tipicamente cada subproblema é uma fração do problema original
+2.Conquista: resolver os subproblemas recursivamente
+3.Combinação: combinar as soluções encontradas, compondo uma solução do problema original
+
+Quando usar?
+Deve ser possível decompor o problema
+em subproblemas do mesmo tipo
+A combinação dos resultados deve ser
+eficiente
+Os subproblemas devem ser mais ou
+menos do mesmo tamanho
+
+
+Busca binária:
+Se um vetor contiver somente um
+elemento, o problema será simples
+ii.Caso contrário, compare o item procurado
+com o item posicionado no meio do vetor
+a)Se forem iguais, a busca terminou
+b)Se o elemento do meio for maior que o
+elemento procurado, o processo de busca
+será repetido na 1ª metade do vetor
+c)Caso contrário, o processo será repetido na
+2ª metade
+
+Iterações necessárias:
+2^x = quantidade de elementos (tamanho do vetor)
