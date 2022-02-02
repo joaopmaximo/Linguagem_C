@@ -27,6 +27,13 @@ int main (void) {
 
     ImprimeMatriz (n, M);
 
+    if (Triangular (n, M)) {
+        printf ("A matriz e triangular");
+    }
+    else {
+        printf ("A matriz nao e triangular");
+    }
+
     return 0;
 }
 
@@ -44,7 +51,23 @@ void ImprimeMatriz (int n, const int M [n] [n]) {
 }
 
 bool Triangular (int n, const int M [n] [n]) {
+    int i = 0, j = 0;
 
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            if (j > i || j == i) {
+                if (M [i] [j] == 0) {
+                    return false;
+                }
+            }
+            else {
+                if (M [i] [j] != 0) {
+                    return false;
+                }
+            }
+        }
 
+        return true;
+    }
     
 }
