@@ -35,5 +35,3 @@ int main (void) {
 
     return 0;
 }
-
-Eita cagou tudo
