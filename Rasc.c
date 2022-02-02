@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdbool.h>
 
+// Cuidado ao utilizar letras maiusculas e minusculas
+
 bool esta_ordenado (int, char [] [21]);
 
 int main (void) {
@@ -17,7 +19,7 @@ int main (void) {
     }
 
     for (i = 0; i < n; i++) {
-        printf ("vetor [%d] = %s\n", i, vetor [i]);
+        printf ("vetor %d = %s\n", i + 1, vetor [i]);
     }
 
     if (esta_ordenado (n, vetor)) {
