@@ -1,28 +1,33 @@
-// Implemente uma função recursiva para calcular o quociente da divisão inteira de 2 inteiros,
-// a e b, segundo a definição recursiva abaixo:
-// a) a dividido por b = 0, se b > a
-// b) a divido b = 1 + (a – b) dividido por b, se a ≥ b
-
 #include <stdio.h>
+#include <math.h>
 
-int div (int, int);
+int conversao (int, int);
 
 int main (void) {
-    int a, b;
+    int n, resultado = 0, i = 0;
 
-    printf ("Insira a e b: ");
-    scanf ("%d %d", &a, &b);
+    printf ("Insira um numero em binario: ");
+    scanf ("%d", &n);
 
-    printf ("Quociente = %d", div (a, b));
+    //while (n >= 1) {
+    //    resultado += (n % 10) * pow (2, i);
+    //    i++;
+    //    n = n / 10;
+    //}
+
+    //printf ("Resultado = %d", resultado);
+    printf ("Em decimal: %d", conversao (n, i));
 
     return 0;
 }
 
-int div (int a, int b) {
+int conversao (int n, int i) {
+    int resultado;
 
-    if (b > a) {
-        return 0;
+    if (n > 0) {
+        resultado = (n % 10) * pow (2, i);
+        return resultado + conversao (n / 10, i + 1);
     }
 
-    return 1 + div (a - b, b);
+    return resultado;
 }

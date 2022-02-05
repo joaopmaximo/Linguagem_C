@@ -1,30 +1,19 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 
-void bin_para_dec (int *);
-
 int main (void) {
-    int num;
-   
-    printf ("insira um numero em binario: ");
-    scanf ("%d", &num);
+    int n, resultado = 0, i = 0;
 
-    bin_para_dec (&num);
+    printf ("Insira o numero em binario: ");
+    scanf ("%d", &n);
 
-    printf ("numero em decimal: %d", num);
-
-    return 0;
-}
-
-void bin_para_dec (int *n) {
-    int i = 0, aux, resultado = 0;
-
-    while (*n > 0) {
-        aux = (*n % 10) * pow (2, i++);
-        *n /= 10;
-        resultado += aux;
+    while (n >= 1) {
+        resultado += (n % 10) * pow (2, i);
+        i++;
+        n = n / 10;
     }
 
-    *n = resultado;
+    printf ("Em decimal: %d", resultado);
+
+    return 0;
 }
