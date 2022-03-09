@@ -9,15 +9,7 @@ int main (void) {
     printf ("Insira um numero em binario: ");
     scanf ("%d", &n);
 
-/*
-    while (n >= 1) {
-        resultado += (n % 10) * pow (2, i++);
-        n = n / 10;
-    }
-*/
-
     printf ("Em decimal: %d", conversao (n, i));
-    //printf ("Em decimal: %d", resultado);
 
     return 0;
 }
@@ -25,10 +17,12 @@ int main (void) {
 int conversao (int n, int i) {
     int resultado;
 
-    if (n > 0) {
+    printf ("i = %d\n", i);
+
+    if (n >= 1) {
         resultado = (n % 10) * pow (2, i);
         return resultado + conversao (n / 10, i + 1);
     }
-
-    return resultado;
+    
+    return 0;
 }
