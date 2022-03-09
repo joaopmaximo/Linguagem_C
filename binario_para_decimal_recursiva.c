@@ -1,30 +1,29 @@
-/*
-3. Implemente uma função recursiva para imprimir um número natural passado como
-parâmetros na base binária.
-*/
-
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
-void dec_para_bin(int);
+void bin_para_dec (int *);
 
-int main(void){
-    int nat;
+int main (void) {
+    int num;
+   
+    printf ("Insira um numero em binario: ");
+    scanf ("%d", &num);
 
-    printf("Digite o nu'mero em decimal: ");\
-    scanf("%d", &nat);
-    printf("O nu'mero %d em binario e': ", nat);
-    dec_para_bin(nat);
-    printf("\n");
+    bin_para_dec (&num);
+
+    printf ("Numero em decimal: %d", num);
 
     return 0;
 }
 
-void dec_para_bin(int num_nat){
-    if (num_nat < 2) {
-        printf("%d", num_nat);
+void bin_para_dec (int *n) {
+    int i = 0, resultado = 0;
+
+    while (*n > 0) {
+        resultado += (*n % 10) * pow (2, i++);
+        *n /= 10;
     }
-    else {
-        dec_para_bin(num_nat / 2);
-        printf("%d", num_nat % 2);
-    }
+
+    *n = resultado;
 }

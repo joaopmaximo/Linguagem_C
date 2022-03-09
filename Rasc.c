@@ -9,14 +9,15 @@ int main (void) {
     printf ("Insira um numero em binario: ");
     scanf ("%d", &n);
 
-    //while (n >= 1) {
-    //    resultado += (n % 10) * pow (2, i);
-    //    i++;
-    //    n = n / 10;
-    //}
+/*
+    while (n >= 1) {
+        resultado += (n % 10) * pow (2, i++);
+        n = n / 10;
+    }
+*/
 
-    //printf ("Resultado = %d", resultado);
     printf ("Em decimal: %d", conversao (n, i));
+    //printf ("Em decimal: %d", resultado);
 
     return 0;
 }
