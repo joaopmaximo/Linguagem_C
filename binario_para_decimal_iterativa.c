@@ -20,7 +20,7 @@ int main (void) {
 void bin_para_dec (int *n) {
     int i = 0, resultado = 0;
 
-    while (*n > 0) {
+    while (*n >= 1) {
         resultado += (*n % 10) * pow (2, i++);
         *n /= 10;
     }
