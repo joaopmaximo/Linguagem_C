@@ -12,7 +12,7 @@ int main (void) {
     agora.minutos = 25;
     agora.segundos = 30;
 
-    printf ("%d\nnome: %s\n", joao.idade, joao.nome);
+    printf ("%d:%d:%d", agora.horas, agora.minutos, agora.segundos);
 
     return 0;
 }
