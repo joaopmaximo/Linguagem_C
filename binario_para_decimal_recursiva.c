@@ -17,8 +17,6 @@ int main (void) {
 int conversao (int n, int i) {
     int resultado;
 
-    printf ("i = %d\n", i);
-
     if (n >= 1) {
         resultado = (n % 10) * pow (2, i);
         return resultado + conversao (n / 10, i + 1);
